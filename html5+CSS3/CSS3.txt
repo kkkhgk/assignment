@@ -1,0 +1,33 @@
+1.https://zhuanlan.zhihu.com/p/375080554 	html5的优势
+
+2.https://www.cnblogs.com/hz1124/p/6090835.html		html5新增标签和属性
+
+3.https://www.cnblogs.com/yuxingyoucan/p/5682085.html 	html5 input 新增的类型和属性
+
+4.https://www.runoob.com/css/css-border.html	css3的边框效果
+
+5.https://www.runoob.com/css3/css3-text-effects.html	css3的文本效果
+
+6.https://www.runoob.com/css3/css3-gradients.html		css3的背景渐变效果
+
+7.https://www.runoob.com/css3/css3-2dtransforms.html，	https://www.runoob.com/css3/css3-3dtransforms.html	css3 2D/3D效果
+
+8.https://www.runoob.com/css3/css3-animations.html	css帧动画
+
+9.https://www.runoob.com/html/html-sounds.html	html5媒体元素
+
+10. https://juejin.cn/post/6844904039558152199#heading-5	一些动画库
+
+11.https://www.cnblogs.com/roseAT/p/10367668.html
+
+12.https://www.cnblogs.com/JCDXH/p/11498445.html
+
+13.https://www.cnblogs.com/clean/p/7595776.html
+
+14.https://www.cnblogs.com/html5tricks/p/3668494.html
+
+15.https://www.cnblogs.com/ximenchuifa/p/13174472.html
+
+16.https://juejin.cn/post/6844903576368578574
+
+17.https://www.cnblogs.com/star91/p/yi-zhong-jian-dan-decss-fan-pai-xiao-guo-shi-xian.html

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline;
+        }
+        li:not(:last-child)::after{
+            content: " | ";
+        }
+
+        p:before{
+        content: "H";
+        }
+        p:after{
+            content: "d";
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>HTML 5</li>
+            <!-- <li>|</li> -->
+            <li>CSS3</li>
+            <!-- <li>|</li> -->
+            <li>JavaScript</li>
+        </ul>
+    </nav>
+
+    <p>ello Worl</p>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+            td{
+				text-align: left;
+			}
+			.butdiv{
+				width: 100px;
+				margin: 0 auto;
+			}
+			tr td:first-child{
+				width: 100px;
+				height: 40px;
+				background-color: #ffce63;
+			}
+			tr td:nth-child(2){
+				width: 350px;
+				height: 40px;
+				background-color: #fee3a7;
+			}
+			tr td:nth-child(3){
+				width: 250px;
+				height: 40px;
+				background-color: #fff8e6;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1px" cellspacing="0" align="center">
+			<form id="myForm">
+            <tr>
+                <td width="700px" height="40px" style="background-color: #e3e3e3;" colspan="3">
+					请填写以下内容，注意，标有<span style="color: red;font-weight:bold">*</span>的必须填写
+				</td>
+            </tr>
+			 <tr>
+				<td>用户名</td>
+				<td>
+					<input type="text" id="name" onblur="nameBlur()">
+					<span style="color: red;font-weight:bold" id="nameReg">*</span>
+				</td>
+				<td>
+					英文字符，<span style="color: red;font-weight:bold">最长十位</span>
+				</td>
+			</tr> 
+			<tr>
+				<td>口令</td>
+				<td>
+					<input type="password" id="pwd" onblur="pwdBlur()">
+					<span style="color: red;font-weight:bold" id="pwdReg">*</span>
+				</td>
+				<td>
+					英文字符和数字,最长16位
+				</td>
+			</tr> 
+			<tr>
+				<td>确认口令</td>
+				<td>
+					<input type="password" id="affirmPwd" onblur="affirmPwdBlur()">
+					<span style="color: red;font-weight:bold" id="affirmPwdReg">*</span>
+				</td>
+				<td>
+					请与您的口令保持一致</span>
+				</td>
+			</tr> 
+			<tr>
+				<td>电子邮件</td>
+				<td>
+					<input type="text" id="mail" onblur="mailBlur()">
+					<span style="color: red;font-weight:bold" id="mailReg">*</span>
+				</td>
+				<td>
+					最重要的联系方式
+				</td>
+			</tr> 
+			<tr>
+				<td>姓名</td>
+				<td>
+					<input id="id" type="text" onblur="idBlur()">
+					<span id="idReg" style="color: red;font-weight:bold">*</span>
+				</td>
+				<td>
+					请输入您的真实姓名，这是您重要的信息
+				</td>
+			</tr> 
+			<tr>
+				<td>性别</td>
+				<td>
+					<select id="1" style="width: 100px;height:28px;text-align:center;" onblur="selBlur1()">
+						<option>---请选择---</option>
+						<option value="male">男</option>
+						<option value="female">女</option>
+					</select>
+					<span style="color: red;font-weight:bold" id="check1">*</span>
+				</td>
+				<td>
+					
+				</td>
+			</tr> 
+			<tr>
+				<td>生日</td>
+				<td>
+					<input id="birthday" type="date" style="width: 150px;height: 25px;" onblur="birthdayBlur()">
+					<span id="birthdayReg" style="color: red;font-weight:bold">*</span>
+				</td>
+				<td>
+					生日是确认您身份的重要信息之一，在您过生日时，您将受到本站的一份精美生日礼品
+				</td>
+			</tr> 
+			<tr>
+				<td>省份城市</td>
+				<td>
+					<select id="2" style="width: 100px;height:28px;text-align:center;" onblur="selBlur2()" onchange="showCity()">
+						<option>---请选择---</option>
+						<option value="hubei">湖北省</option>
+						<option value="beijing">北京市</option>
+						<option value="otherc">其他国家</option>
+					</select>
+					<select id="21" style="width: 100px;height:28px;text-align:center;">
+						<option>---请选择---</option>
+					</select>
+					<span style="color: red;font-weight:bold" id="check2">*</span>
+				</td>
+				<td>
+					其它国家的用户选择“其他国家”
+				</td>
+			</tr> 
+			<tr>
+				<td>婚姻状况</td>
+				<td>
+					<select id="3" style="width: 100px;height:28px;text-align:center;" onblur="selBlur3()">
+						<option>---请选择---</option>
+						<option value="yihun">已婚</option>
+						<option value="weihun">未婚</option>
+					</select>
+					<span id="check3"></span>
+				</td>
+				<td>
+				</td>
+			</tr> 
+			<tr>
+				<td>教育状况</td>
+				<td>
+					<select id="4" style="width: 100px;height:28px;text-align:center;" onblur="selBlur4()">
+						<option>---请选择---</option>
+						<option value="master">硕士</option>
+						<option value="underguaduate">本科</option>
+					</select><span style="color: red;font-weight:bold" id="check4">*</span>
+				</td>
+				<td>
+					
+				</td>
+			</tr> 
+			<tr>
+				<td>职业</td>
+				<td>
+					<select id="5" style="width: 100px;height:28px;text-align:center;" onblur="selBlur5()">
+						<option>---请选择---</option>
+						<option value="yuan1">程序猿</option>
+						<option value="yuan2">程序媛</option>
+					</select>
+					<span style="color: red;font-weight:bold" id="check5">*</span>
+				</td>
+				<td>
+					
+				</td>
+			</tr> 
+			<tr>
+				<td>个人月收入</td>
+				<td>
+					<input id="salary" type="text" onblur="salaryBlur()">
+					<span id="salaryReg" style="color: red;font-weight:bold">*</span>
+				</td>
+				<td>
+					
+				</td>
+			</tr> 
+			<tr>
+				<td>身份证件号码</td>
+				<td>
+					<input type="text" id="cardNum" onblur="cardNumBlur()">
+					<span style="color: red;font-weight:bold" id="cardNumReg">*</span>
+				</td>
+				<td>
+					也可以填写任何能够证明您身份的证件号码，在多数有奖活动中都需要
+				</td>
+			</tr> 
+			<tr>
+				<td>兴趣爱好</td>
+				<td>
+					<select id="6" style="width: 100px;height:28px;text-align:center;" onblur="selBlur6()">
+						<option>---请选择---</option>
+						<option value="ball">打球</option>
+						<option value="dance">跳舞</option>
+					</select>
+					<span style="color: red;font-weight:bold" id="check6">*</span>
+				</td>
+				<td>
+					
+				</td>
+			</tr> 
+			<tr>
+				<td>通讯地址</td>
+				<td>
+					<input type="text" id="address" onblur="addressBlur()">
+					<span style="color: red;font-weight:bold" id="addressReg">*</span>
+				</td>
+				<td>
+					以便进行有奖活动时邮寄奖品
+				</td>
+			</tr> 
+			<tr>
+				<td>邮政编码</td>
+				<td>
+					<input id="mailnum" type="text" onblur="mailnumBlur()">
+					<span id="mailnumReg" style="color: red;font-weight:bold">*</span>
+				</td>
+				<td>
+					
+				</td>
+			</tr> 
+			<tr>
+				<td>电话</td>
+				<td>
+					<input type="text" id="phone" onblur="phoneBlur()">
+					<span style="color: red;font-weight:bold" id="phoneReg">*</span>
+				</td>
+				<td>
+					以便联系
+				</td>
+			</tr> 
+			<tr>
+				<td>您的个人主页</td>
+				<td>
+					<input id="ownpage" type="text" value="http://" onblur="ownpageBlur()">
+					<span id="ownpageReg"></span>
+				</td>
+				<td>
+					
+				</td>
+			</tr> 
+			<tr>
+				<td>QICQ</td>
+				<td>
+					<input id="QICQ" type="text" onblur="QICQBlur()">
+					<span id="QICQReg"></span>
+				</td>
+				<td>
+					
+				</td>
+			</tr> 
+			<tr>
+                <td width="700px" height="40px" style="background-color: #e3e3e3;" colspan="3">
+					<div class="butdiv">					
+						<button onclick="checkForm(event)">注册</button>
+						<button onclick="clearForm()">清除</button>
+					</div>
+				</td>
+            </tr>
+		</form>
+		</table>
+		<script type="application/javascript">
+			//下拉框处理
+			function checkselect(selectid){
+				var select=document.getElementById(selectid)
+				var show = document.getElementById("check"+selectid)
+				if(select.selectedIndex!==0){
+					show.innerText = "√";
+					show.style.color = "green"; //设置"√"文本颜色为绿色
+					select.style.borderColor="green"
+					return true
+				}
+				else if(selectid!=3){
+					show.innerText = "*";
+					show.style.color = "red";
+					return false
+				}
+				else{
+					show.innerText = "";
+					return false
+				}
+			}
+			function selBlur1(){
+				checkselect(1)
+			}
+			function selBlur2(){
+				checkselect(2)
+			}
+			function selBlur3(){
+				checkselect(3)
+			}
+			function selBlur4(){
+				checkselect(4)
+			}
+			function selBlur5(){
+				checkselect(5)
+			}
+			function selBlur6(){
+				checkselect(6)
+			}
+
+			//普通输入框处理，非空值即可
+			function normolText(inputId){
+				var input=document.getElementById(inputId);
+				var text = input.value;
+				var show = document.getElementById(inputId + "Reg");
+				if(text!=""){
+                    show.innerText = "√";
+					show.style.color = "green"; //设置"√"文本颜色为绿色
+					input.style.borderColor="green";
+					return true
+				}
+				else if(inputId!=ownpage&&inputId!=QICQ){
+					show.innerText = "*";
+					show.style.color = "red"
+					input.style.borderColor="red"
+					return false
+				}
+				else{
+					show.innerText = "";
+					return true
+				}
+			}
+			function idBlur(){
+				normolText("id")
+			}
+			function birthdayBlur(){
+				normolText("birthday")
+			}
+			function salaryBlur(){
+				normolText("salary")
+			}
+			function mailnumBlur(){
+				normolText("mailnum")
+			}
+			function ownpageBlur(){
+				normolText("ownpage")
+			}
+			function QICQBlur(){
+				normolText("QICQ")
+			}
+
+			//校验输入框处理，写一个getText（inputId,reg）方法来判断 正则表达式
+			function getText(inputId, reg) {
+				var input=document.getElementById(inputId);
+				var text = input.value; //获取输入框的ID 存放到text变量中
+				var verify = reg; //获取正则表达式 存放到verify变量中
+				var result = verify.test(text.trim()); //判断输入框内容是否符合 正则表达式
+				var show = document.getElementById(inputId + "Reg"); //获取存放"√"和"×"文本的span标签ID
+				//如果符合正则表达式，则在输入框后面打"√"；否则打"×"
+				if(result && text != "") {
+					show.innerText = "√";
+					show.style.color = "green"; //设置"√"文本颜色为绿色
+					input.style.borderColor="green";
+					return true
+				} else if(text != ""){
+					show.innerText = "×";
+					show.style.color = "red"; //设置"×"文本颜色为红色
+					input.style.borderColor="red";
+					return false
+				}
+				else{
+					show.innerText = "*";
+					show.style.color = "red"
+					input.style.borderColor="red"
+					return false
+				}
+			}
+			//用户名输入框，失去焦点 的方法
+			function nameBlur() {
+				//调用getText（inputId,reg）方法
+				getText("name", /^[A-Za-z]{0,10}$/);
+			}
+			//密码输入框，失去焦点 的方法
+			function pwdBlur() {
+				//调用getText（inputId,reg）方法
+				getText("pwd", /^[A-Za-z0-9]{0,16}$/);
+			}
+			//确认密码输入框，失去焦点 的方法
+			function affirmPwdBlur() {
+				var affirmPwd = document.getElementById("affirmPwd").value; //获取确认密码输入框的内容
+				var affirmPwdReg = document.getElementById("affirmPwdReg"); //获取存放确认密码判断结果的 span标签 的ID
+				//如果确认密码和密码相等，调用getText（inputId,reg）方法，否则 "密码和确认密码不匹配"
+				if(affirmPwd == pwd) {
+					//调用getText（inputId,reg）方法
+					getText("affirmPwd", /^[A-Za-z0-9]{0,16}$/);
+					return true
+				} else if(affirmPwd!=""){
+					affirmPwdReg.innerText = "密码和确认密码不匹配";
+					affirmPwdReg.style.color = "red";
+					affirmPwdReg.style.borderColor="red";
+					return false
+				}
+				else{
+					affirmPwdReg.innerText ="*";
+					affirmPwdReg.style.color = "red";
+					affirmPwdReg.style.borderColor="red";
+					return false
+				}
+			}
+			//邮箱输入框，失去焦点 的方法
+			function mailBlur() {
+				//调用getText（inputId,reg）方法
+				getText("mail", /^[A-z0-9]+@[A-z0-9]+.com$/);
+			}
+			//手机号输入框，失去焦点 的方法
+			function phoneBlur() {
+				//调用getText（inputId,reg）方法
+				getText("phone", /^1[3-9]{1}\d{9}$/);
+			}
+			//身份证号输入框，失去焦点 的方法
+			function cardNumBlur() {
+				//调用getText（inputId,reg）方法
+				getText("cardNum", /^[1-9]{1}\d{17}$|^[1-9]{1}\d{16}(X|x)$/);
+			}
+			//地址输入框，失去焦点 的方法
+			function addressBlur() {
+				//调用getText（inputId,reg）方法
+				getText("address", /^[\u4e00-\u9fa5][0-9A-z\u4e00-\u9fa5]+$/);
+			}
+			//提交按钮
+			function checkForm(event){
+				event.preventDefault();
+                if(checkselect(1)&&checkselect(2)&&checkselect(3)&&checkselect(4)&&checkselect(5)&&checkselect(6)
+				&&normolText("id")&&normolText("birthday")&&normolText("salary")&&normolText("mailnum")&&normolText("ownpage")&&normolText("QICQ")
+				&&getText("name", /^[A-Za-z]{0,10}$/)&&getText("pwd", /^[A-Za-z0-9]{0,16}$/)&&affirmPwdBlur()&&getText("mail", /^[A-z0-9]+@[A-z0-9]+.com$/)
+				&&getText("phone", /^1[3-9]{1}\d{9}$/)&&getText("cardNum", /^[1-9]{1}\d{17}$|^[1-9]{1}\d{16}(X|x)$/)&&getText("cardNum", /^[1-9]{1}\d{17}$|^[1-9]{1}\d{16}(X|x)$/)
+				){
+					alert('注册成功')
+				}
+				    
+			}
+            //清除按钮
+			function clearForm() {
+				document.getElementById("myForm").reset();
+			}
+
+		</script>
+		<script>
+			//城市二级select处理
+			function showCity (){
+			
+            /*
+            	定义二维数组，存放城市
+            */
+			//城市数组要与option标签中的省份相对应，因为第一个选项就是“省份”描述，所以第一个数组用空数组即可
+			var citys = [[],["武汉","仙桃","荆州","天门"],["北京"],["其他国家"]];
+			
+            
+            /*
+            	根据选择的省份，得到这个省份中的城市数组
+            */
+			//获取用户选择的省份
+			var provinceNode = document.getElementById("2");
+			//获取选择的省份的索引
+			var index = provinceNode.selectedIndex;
+			//根据省份的索引从二维数组中获取到显示的城市数据，showCity是一个一维数组
+			var showCity = citys[index];
+			
+			
+            /*
+            	将城市下拉菜单中的所有标签删除
+            */
+			//我们需要把显示的数据显示到城市这个下拉菜单中，首先需要获取到城市下拉菜单的节点，再获取到它的子节点，也就是具体的城市，将他们删除后，再将获取到的信息显示在城市下拉菜单中
+			//获取到城市下拉菜单的节点
+			var cityNode = document.getElementById("21");
+			//获取到城市下拉菜单的子节点，也就是具体的城市选项，得到的是一个子节点数组
+			var cityChildNodes = cityNode.childNodes;
+			//将所有的cityChilds删除，也就是城市下拉菜单中的所有元素。
+            //for循环这里没有变量自增，是因为每当删除一个城市后，下一个城市就自动向前，所以只用一直删除第一个城市即可。
+			for(var i = 0; i < cityChildNodes.length; ){
+				cityNode.removeChild(cityChildNodes[i]);
+			}
+			
+			
+            /*
+            	将得到的城市数组显示在城市的下拉列表中
+            */
+			//将获取的城市显示到城市下拉菜单的option标签中
+			for(var i = 0; i < showCity.length; i++){
+				//创建一个option标签用于存放具体的城市
+				var optionCityNode = document.createElement("option");
+				//将查询到的城市添加到option标签中
+				optionCityNode.innerHTML = showCity[i];
+				//将optionCityNode标签添加到城市下拉菜单中
+				cityNode.appendChild(optionCityNode);
+			}
+		}
+		</script>
+
+	</body>
+</html>

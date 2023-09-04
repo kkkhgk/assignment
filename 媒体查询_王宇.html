@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="applicable-device" content="pc">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="renderer" content="webkit">
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<title>首页 - 中国教育考试网</title>
+<meta name="keywords" content="中国教育考试网 教育考试 教育 首页 - 中国教育考试网 "/>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        width: 1200px;
+        margin: auto;
+        font-size: 14px;
+        font-family: 'Microsoft yahei', Arial, "Times New Roman", Times, serif, NeeaSimsun-Regular;
+    }
+    @media screen and (max-width:1440px){
+        html{
+            width:1000px;
+            font-size: 10px;
+        }
+        .slides img{
+            width: 1000px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    li{
+        list-style-type: none;
+    }
+    .logodiv {
+        float: left;
+        margin-top: 15px
+    }
+    .navAll {
+        position: absolute;
+        left: 50%;
+        top: 60px;
+        overflow: hidden;
+        zoom: 1;
+        width: 27rem;
+        overflow: hidden;
+    }
+    .navAllIn .searchBox {
+        float: right;
+    }
+    .searchBox #textinput {
+        background: url(/res/Home/structure/inputtext.png) no-repeat left top;
+        height: 1.6rem;
+        width: 17.2rem;
+        padding: 0 10px;
+        border: none;
+        float: left;
+        margin-top: 1px;
+    }
+    .searchBox button {
+        border: none;
+        background: none;
+        margin: 3px 0 0 5px
+    }
+    #logins {
+        position: absolute;
+        right: 105px
+    }
+    .search {
+        position: absolute;
+        right: 0;
+        top: 50px
+    }
+    input{
+        outline: none;
+    }
+    .text {
+        width: 228px;
+        height: 26px;
+        line-height: 26px;
+        border: 1px solid #999;
+        border-bottom-color: #E5E5E5;
+        border-right-color: #E5E5E5;
+        float: right;
+        padding: 0 5px;
+        font-family: "微软雅黑";
+    }
+    .submit {
+        background: url('https://www.neea.edu.cn/res/Home/structure/submit.jpg') no-repeat left top;
+        height: 2rem;
+        width: 2.3rem;
+        cursor: pointer;
+        border: none;
+        float: right
+    }
+    .n_nav {
+        height: 3.3rem;
+        background-color: #E7E8EB;
+        border-bottom: solid 3px #003E7D;
+        font-weight: bold;
+    }
+    .n_nav .indexbtn {
+        background: #ff7f00;
+        width: 5rem;
+        text-align: center;
+        float: left;
+        height: 3.3rem
+    }
+    .n_nav dl {
+        float: left;
+        line-height: 3.3rem;
+        padding: 0 0 0 20px;
+    }
+    .n_nav dl dt {
+        float: left;
+        color: #ff7f00;
+        padding-right: 15px;
+        font-size: 1.14rem
+    }
+    .n_nav dl dd {
+        float: left;
+        padding: 0 0 0 6.42rem;
+        margin: 0;
+    }
+    .n_nav .dl-last{
+        display:none;
+    }
+    .n_nav dl dd a {
+        float: left;
+        color: #003e7d;
+        letter-spacing: 1px;
+    }
+    .n_nav dl dd a:hover {
+        color: #ff7f00;
+        text-decoration: none
+    }
+    .xz dl dd{
+        padding:0px 0px 0px 70px;
+    }
+    .xz .dl-last{
+        display:block;
+    }
+    #Header{
+        position: relative;
+    }
+    .header-top{
+        height: 120px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .header-top-right span{
+        position: absolute;
+        right: 0;
+        color: #fff;
+        font-size: 12px;
+        padding-top: 12px;
+    }
+    .cdiv{
+        padding: 0 0 18px;
+        border-bottom: 1px solid #E0E7DA;
+        margin: 0 0 7px;
+    }
+    .cdiv p{
+        width: 100%;
+        line-height: 3.43rem;
+        text-align: left;
+        font-size: 1.67rem;
+        margin-bottom: 0;
+    }
+    .cdiv li{
+        line-height: 2.07rem;
+    }
+    .cdiv li .blueColor{
+        color: #0557a4;
+    }
+    .cdiv li em{
+        font-style: normal;
+        margin: 0 15px;
+        color: #999;
+    }
+    #content{
+        float: left;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="Body">
+        <div id="Header">
+            <div style="height:106px;">
+                <div class="header-top">
+                    <div class="logodiv">
+                        <a style="float:left;" href="//www.neea.edu.cn">
+                            <img src="https://www.neea.edu.cn/res/Home/structure/22051678.png">
+                        </a>
+                    </div>
+                    <div class="header-top-right">
+                        <span>
+                            <a href="//www.neea.edu.cn/html1/folder/1510/793-1.htm" target="_blank">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a href="//www.neea.edu.cn/html1/folder/16013/2-1.htm" target="_blank">ENGLISH</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <form action="/html1/folder/1510/883-1.htm" name="searchform1">
+                    <input type="submit" value="" class="submit">
+                    <input type="text" name="q" onblur="if(value=='')value='请输入关键字'" onmouseover="this.focus()" onfocus="if(value=='请输入关键字')value='';this.select();" value="请输入关键字" class="text" style="color:#666">
+                </form>
+            </div>
+            <div class="n_nav">
+                <div class="indexbtn">
+                    <a href="//www.neea.edu.cn">
+                        <img src="https://www.neea.edu.cn/res/Home/structure/16070042.jpg">
+                    </a>
+                </div>
+                <dl style="padding-left:0">
+                    <dd class="d0"><a href="//www.neea.edu.cn/html1/folder/16093/614-1.htm" target="_blank">考试资讯</a></dd>
+                    <dd class="d1"><a href="//www.neea.edu.cn/html1/category/1508/151-1.htm" target="_blank">公示公告</a></dd>
+                    <dd class="d2" style="margin:0 80px 0 0"><a href="//www.neea.edu.cn/html1/folder/16103/1271-1.htm" target="_blank">考试项目</a></dd>
+                </dl>
+                <dl style="padding-left:0">
+                    <dd class="d5" style="padding-left:0"><a href="//www.neea.edu.cn/html1/folder/1607/298-1.htm" target="_blank">考试报名</a></dd>
+                    <dd class="d6"><a href="//cjcx.neea.edu.cn/" target="_blank">成绩查询</a></dd>
+                    <dd class="d7" style="margin:0 80px 0 0"><a href="//zscx.neea.edu.cn/" target="_blank">证书查询</a></dd>
+                </dl>
+                <dl style="padding:0">
+                    <dd class="d8" style="padding-left:0"><a href="//www.neea.edu.cn/html1/category/16093/830-1.htm" target="_blank">考试研究</a></dd>
+                </dl>
+             </div>
+        </div>
+    </div>
+
+
+
+  
+<style>
+.flexslider{
+    height: 20rem;
+    overflow:hidden;
+    position:relative;
+    text-align:left;
+    width:1200px;
+}
+.slides #ReportIDname{
+    display:block;
+    position:absolute;
+    left:30px;top:15%;
+    color:#fff;
+    font-size:60px;
+    line-height:160%;
+    z-index:15
+}
+.slides #ReportIDLogograph{
+    position:absolute;
+    left:30px;
+    right:30px;
+    top:45%;
+    color:#fff;
+    font-size:20px;
+    line-height:160%;
+    z-index:20;
+    width:600px
+}
+.slides #ReportIDname a:hover{
+    text-decoration:none
+}
+.slides #ReportIDname a{
+    color:#fff;
+}
+.flex-control-nav{
+    position:absolute;
+    bottom:15px;
+    left:50%;
+    margin-left:-125px;
+    z-index:30;
+    width:250px;
+}
+.flex-control-nav li{
+    float:left;
+    display:inline
+}
+.flex-control-nav li a{
+    float:left;
+    width:73px;
+    margin-right:10px;
+    height:15px;
+    border-bottom:solid 5px #fff;
+    font-size:0;
+    cursor:pointer;
+}
+.flex-control-nav li a.flex-active{
+    border-bottom:solid 5px #FF8000
+}
+.flex-direction-nav a{
+    position:absolute;
+    top:50%;
+    margin-top:-54px;
+    height:108px;
+    display:block;
+    width:54px;
+    text-indent:-9999em
+}
+.flex-direction-nav a.flex-prev{
+    left:0;
+    background:url("https://www.neea.edu.cn/res/Home/structure/15100010.png") no-repeat left top;
+}
+.flex-direction-nav a.flex-next{
+    right:0;
+    background:url("https://www.neea.edu.cn/res/Home/structure/15100011.png") no-repeat left top;
+}
+.hid_show {
+    text-align:right;
+    height:30px;
+}
+.hid_show img{
+    margin-top:7px
+}
+</style>
+<div class="focus">
+<div class='hid_show'><img src="https://www.neea.edu.cn/res/Home/structure/15100549.jpg"></div>
+<div class="flexslider" id="slider" style="">
+<ul class="slides">
+    <li>
+        <span id='VenuesIDPicture'><a href='/html1/page/22023/7970-1.htm' target='_blank' title="答卷人"><img src ="https://www.neea.edu.cn/res/Home/page/20019131.jpg"></a></span>
+    </li>
+</ul>
+</div>
+</div>
+</div>
+<div id="Content"><div id="Content1">
+<style>
+    #Content{
+        margin-top: 35px
+    }
+    #Content1{
+        float: left;
+        width: 60%;
+    }
+    .leftcont{
+    }
+    .lontit{
+        border-top: solid 3px #003E7D;
+        height: 4.28rem;
+        line-height: 4.28rem;
+    }
+    .lontit strong{
+        float: left;
+        font-size: 2.14rem;
+        font-family: "微软雅黑";
+        color:#FF8000;
+        font-weight:normal
+    }
+    .tablecont strong{
+        font-size: 2.14rem;
+        font-family: "微软雅黑";
+        color:#FF8000;
+         font-weight:normal;position:absolute;left:0;top:15px
+    }
+    .lontit a,.lontit span{
+        float: right;
+        font-size: 1rem;
+        margin-left: 10px;
+        color: #446C94;margin-top:5px
+    }
+    .lontit a.Selected{color:#FF7F00}
+    .key{margin: 15px 0 22px}
+    .key #ReportIDname{
+        display: block;
+        margin-bottom:22px;
+    }
+    .key #ReportIDname a,.key #ReportIDkicker a{
+        font-size: 1.7rem;
+    }
+.key #ReportIDname a:hover{color:#ff8000}
+    .key #ReportIDLogograph{
+        display: block;text-indent:2em;
+        font-size: 1.07rem;
+        color: #777;
+        line-height: 200%;margin-top:20px;
+    }
+.nokey{overflow:hidden;clear:both}
+.nokey ul{min-height:200px;*height:200px}
+.nokey_ ul{min-height:63px;*height:50px;overflow:hidden;}
+    .nokey li{background:url(/res/Home/structure/listico.jpg) no-repeat left 12px;padding-left:15px;height:33px;line-height:33px;overflow:hidden;*width:700px;*float:left;clear:both}
+
+
+.nokey li #ReportIDname{display:block;padding-right:25px;font-size:1rem;float:left;}
+.nokey li #ReportIDname a{/*color:#465865*/}/*,.nokey_ li a*/
+.nokey li #ReportIDIssueTime{float:right;color:#AFAFAF}
+.nokey .moreli,.nokey_ .moreli{text-align:right;background:none;}
+.nokey .moreli a,.nokey_ .moreli a{color:#FF7F00}
+.nokey_ li{float:left;width:50%;background:url(/res/Home/structure/_rc2.jpg) no-repeat left 2px;margin-bottom:12px;overflow:hidden}
+.nokey_ li:last-of-type{padding-right:0}
+.nokey_ ul{}
+.tablecont {display:none;}
+.relative{position:relative;height:20.71rem}
+.nokey_ li #ReportIDname{display:block;border-left:none;padding:0 0 3px 15px;margin-top:-3px;/*line-height:180%;*/}
+
+.nokey .ReportIDgrandpa{float:left;margin-right:3px;color:#FF8000}
+.nokey .ReportIDgrandpa a{color:#FF8000}
+    </style>
+
+<div class="leftcont">
+<div class="relative">
+    <div class="lontit lines"><a href="/html1/category/1508/151-1.htm" onmousemove="JavaScript:ChangeDiv('2','JKDiv_',2,this)" target="_blank">公示公告</a><span>|</span><a href="/html1/folder/16093/614-1.htm" target="_blank" onmousemove="JavaScript:ChangeDiv('0','JKDiv_',2,this)" id="JKDiv_DEF" class="Selected">考试资讯</a></div>
+<div class="tablecont sider1" id='JKDiv_0' style="display:block">
+<strong>考试资讯</strong>
+
+<div class="key"><span id='ReportIDkicker'><a href='/html1/report/2306/74-1.htm' target='_blank' title="丁薛祥在检查2023年高考准备工作时强调&#60;br>以极端负责的精神做好高考组织工作 确保高考安全平稳顺利">丁薛祥在检查2023年高考准备工作时强调 以极端负责的精神...</a></span><span id='ReportIDLogograph'>中共中央政治局常委、国务院副总理丁薛祥3日下午到北京市和教育部教育考试院检查2023年高考准备工作。他强调，高考关系为党育人、为国选才，关系千家万户和广大学子切身利益。要深入学习领会习...</span></div><!--{listing:15080134}--><div class="nokey_">
+<ul id="lastli"><li><span id='ReportIDname'><a href='/html1/report/2302/242-1.htm' target='_blank' title="2023年同等学力人员申请硕士学位外国语水平和学科综合水平全国统一考试报名通知">2023年同等学力人员申请硕士学位外国语水平...</a></span></li><li><span id='ReportIDname'><a href='/html1/report/2210/435-1.htm' target='_blank' title="关于开通2022年同等学力人员申请硕士学位外国语水平和学科综合水平&#60;br>全国统一考试成绩查询的公告">关于开通2022年同等学力人员申请硕士学位外...</a></span></li><li><span id='ReportIDname'><a href='/html1/report/2209/448-1.htm' target='_blank' title="2022年下半年全国外语水平考试（WSK）报名工作启动">2022年下半年全国外语水平考试（WSK）报名...</a></span></li><li><span id='ReportIDname'><a href='/html1/report/2207/8-1.htm' target='_blank' title="关于调整2022年同等学力人员申请硕士学位外国语水平和学科&#60;br>综合水平全国统一考试时间的通知">关于调整2022年同等学力人员申请硕士学位外...</a></span></li></ul>
+<div class="moreli"><a href="/html1/folder/16093/614-1.htm" target="_blank">更多&gt;&gt;</a></div>
+
+</div>
+</div>
+<div class="tablecont sider2" id='JKDiv_1'>
+<strong>考试动态</strong><div class="nokey">
+
+<ul></ul>
+<div class="moreli"><a href="/html1/category/1508/150-1.htm">更多&gt;&gt;</a></div>
+
+</div>
+</div><div class="tablecont sider2" id='JKDiv_2'>
+<strong>公示公告</strong>
+<div class="nokey">
+
+<ul><li><span id='ReportIDname'><a href='/html1/report/2307/371-1.htm' target='_blank' title="《中国英语能力等级量表》新成果发布暨《量表》应用研讨会征文通知—2号">《中国英语能力等级量表》新成果发布暨《量表》应用研讨会征文通知—2号</a></span><span id='ReportIDIssueTime'>2023-07-11</span></li><li><span id='ReportIDname'><a href='/html1/report/2306/483-1.htm' target='_blank' title="《中国英语能力等级量表》新成果发布暨《量表》应用研讨会会议报名通知">《中国英语能力等级量表》新成果发布暨《量表》应用研讨会会议报名通知</a></span><span id='ReportIDIssueTime'>2023-06-30</span></li><li><span id='ReportIDname'><a href='/html1/report/2306/417-1.htm' target='_blank' title="《中国英语能力等级量表》新成果发布暨《量表》应用研讨会征文通知">《中国英语能力等级量表》新成果发布暨《量表》应用研讨会征文通知</a></span><span id='ReportIDIssueTime'>2023-06-26</span></li><li><span id='ReportIDname'><a href='/html1/report/2304/124-1.htm' target='_blank' title="教育部教育考试院教育考试科研数据管理平台项目成交公告">教育部教育考试院教育考试科研数据管理平台项目成交公告</a></span><span id='ReportIDIssueTime'>2023-04-07</span></li><li><span id='ReportIDname'><a href='/html1/report/2303/310-1.htm' target='_blank' title="教育部教育考试院教育考试科研数据管理平台项目比选公告">教育部教育考试院教育考试科研数据管理平台项目比选公告</a></span><span id='ReportIDIssueTime'>2023-03-24</span></li><li><span id='ReportIDname'><a href='/html1/report/2210/418-1.htm' target='_blank' title="教育部教育考试院2022年度资源收集解析增项项目成交公告">教育部教育考试院2022年度资源收集解析增项项目成交公告</a></span><span id='ReportIDIssueTime'>2022-10-24</span></li></ul>
+<div class="moreli"><a href="/html1/category/1508/151-1.htm" target="_blank">更多&gt;&gt;</a></div>
+</div>
+</div>
+</div>
+<div class="lontit" style="margin-top:15px"><a name="5F"></a> <strong>考试项目</strong>
+
+
+
+ </div>
+
+
+ 
+<div class="cdiv">
+<p><a href="/html1/category/1705/2929-1.htm" target="_blank">国家教育考试</a></p>
+
+<ul><li style="margin-bottom:0"><a href="//gaokao.neea.edu.cn/" target="_blank" class="blueColor">普通高考</a><em>|</em><a href="//chengkao.neea.edu.cn/" target="_blank" class="blueColor">成人高考</a><em>|</em><a href="//yankao.neea.edu.cn/" target="_blank" class="blueColor">研究生考试</a><em>|</em>
+<a href="//zikao.neea.edu.cn/" target="_blank" class="blueColor">自学考试</a>
+
+<em>|</em><a href="//ntce.neea.edu.cn/" target="_blank" class="blueColor">中小学教师资格考试</a>
+<em>|</em><a href="//tdxl.neea.edu.cn/" target="_blank" class="blueColor">同等学力申请硕士学位考试</a>
+</li>
+</ul></div>
+
+<div class="cdiv">
+<p><a href="/html1/category/1705/2935-1.htm" target="_blank">社会证书考试</a></p>
+
+<ul>
+<li><a href="//cet.neea.edu.cn/" class="blueColor" target="_blank">全国大学英语四、六级考试(CET) </a><em>|</em><a href="//ncre.neea.edu.cn/" class="blueColor" target="_blank">全国计算机等级考试(NCRE)</a><em>|</em><a href="//nit.neea.edu.cn/" target="_blank" class="blueColor">全国计算机应用水平考试(NIT)</a> 
+</li>
+<li>
+<a href="//pets.neea.edu.cn/" target="_blank" class="blueColor">全国英语等级考试(PETS)</a><em>|</em>
+<a href="//wsk.neea.edu.cn/" target="_blank" class="blueColor">全国外语水平考试(WSK)</a><em>|</em><a href="//ccpt.neea.edu.cn/" class="blueColor" target="_blank">书画等级考试(CCPT)</a><!-- <em>|</em><a href="http://att.neea.edu.cn/" target="_blank" class="blueColor">财税等级考试(ATT)</a> -->
+</br><a href="//mhk.neea.edu.cn/" target="_blank" class="blueColor">中国少数民族汉语水平等级考试(MHK)</a>
+</li>
+
+
+</ul>
+</div>
+
+
+<div class="cdiv">
+<p><a href="/html1/category/1705/2957-1.htm" target="_blank">海外考试</a></p>
+
+<ul>
+<li style="margin-bottom:0"><a class="blueColor" href="//toefl-main.neea.cn/" target="_blank">托福网考&reg;(TOEFL iBT&reg;)</a><em>|</em><a href="//ielts-main.neea.cn/" target="_blank" class="blueColor">雅思(IELTS)</a><em>|</em><a href="//testdaf-main.neea.cn/" target="_blank" class="blueColor">德福(TestDaF)</a><!--em>|</em><a href="http://bjt.neea.edu.cn/" target="_blank" class="blueColor">商务日语能力考试(BJT)</a--><em>|</em><a href="//jlpt-main.neea.cn/" target="_blank" class="blueColor">日本语能力测试(JLPT)</a> <br>
+
+<a href="//topik-main.neea.cn/" target="_blank" class="blueColor">韩国语能力考试 (TOPIK)</a><em>|</em><a href="//gre-main.neea.cn/" target="_blank" class="blueColor">GRE&reg;考试(GRE&reg;)</a><em>|</em> <a href="//gmat-main.neea.cn/" target="_blank" class="blueColor">美国管理学研究生入学考试(GMAT)</a>  <br>
+
+<a href="//bec.neea.cn/" target="_block" class="blueColor">剑桥商务英语证书考试 (BEC)</a><em>|</em><a href="//delf-dalf.neea.cn/" target="_blank" class="blueColor">法语(DELF-DALF)</a><em>|</em><a href="//dele.neea.cn/" target="_blank" class="blueColor">对外西班牙语水平证书考试（DELE）</a> <br>
+
+
+<a href="//lsat.neea.edu.cn/" target="_blank" class="blueColor">美国法学院入学考试 (LSAT)</a><em>|</em><a href="//gelpe-bras.neea.edu.cn/" target="_blank" class="blueColor">巴西葡萄牙语(GELPE-BRAS)</a><em>|</em>
+<a href="//cyle.neea.cn/" target="_blank" class="blueColor">剑桥少儿英语 (CYLE)</a><br>
+
+<a href="//cael.neea.cn" target="_blank" class="blueColor">楷尔(CAEL)</a>
+</li>
+
+</ul>
+</div>
+
+<div class="cdiv" style="border-bottom:none;padding-bottom:0">
+<p><a href="/html1/category/1705/2978-1.htm" target="_blank">其它</a></p>
+
+<ul>
+<li style="margin-bottom:0"><a href="//cse.neea.edu.cn/" target="_blank" class="blueColor">国家外语能力测评体系</a></li>
+
+</ul>
+</div><style>
+#Content2{float:left;width:100%}
+.baolist {overflow:hidden;clear: both;margin-top:23px}
+.baolist ul{
+    float: left;}
+.baolist li{
+    background: url(/res/Home/structure/baolisd.jpg) no-repeat left 5px;
+    padding-left: 15px;
+    margin:0 35px 10px 0;background-size:4px auto}
+.baolist .ulright{float:right}        
+.baolist .ulright li{margin-right:0}
+
+.li1 i{background-position:1px 0}
+.li1 a:hover i{background-position:-82px 0}
+.li2 i{background-position:1px -91px}
+.li2 a:hover i{background-position:-85px -91px}
+.li3 i{background-position:1px -182px}
+.li3 a:hover i{background-position:-85px -182px}
+.li4 i{background-position:1px -278px}
+.li4 a:hover i{background-position:-85px -278px}
+.li5 i{background-position:1px -368px;}
+.li5 a:hover i{background-position:-85px -368px}
+.li6 i{background-position:1px -468px}
+.li6 a:hover i{background-position:-85px -468px}
+.rightsider li.li5 i{margin-top:14px}
+.baolist{margin:0px;}
+.baolist .box{width:100%;float:left;padding:16px 0px;border-bottom:1px #F0F0F0 solid;height:auto;}
+.baolist .box span{width:125px;display:block;pfloat:left;text-align:left;height:30px;line-height:30px;font-size:1.21rem;color:#3F3F3F;float:left;font-family:"微软雅黑"}
+.baolist .box ul{width:590px;float:right;height:auto;}
+.baolist .box ul li{width:181px !important;width:196px;float:left;height:30px;line-height:30px;overflow:hidden;font-size:1rem;text-align:left;margin:0px;background: url(/res/Home/structure/baolisd.jpg) no-repeat left 12px;}
+.baolist .box ul li a{color:#465865;}
+
+
+     </style>
+
+        <div class="baolist" style="display:none;">
+            <ul>
+            <li><a href="/html1/folder/15123/25-1.htm" target="_blank">托福</a></li>
+            <li><a href="/html1/folder/15123/30-1.htm" target="_blank">德福</a></li>
+            <li><a href="http://ielts.etest.net.cn/login" target="_blank">雅思</a></li>
+            <li><a href="/html1/folder/15123/36-1.htm" target="_blank">商务日语能力考试</a></li>
+            <li><a href="/html1/folder/15123/51-1.htm" target="_blank">美国大学先修课程考试</a></li>
+            
+            </ul> 
+            <ul style="margin-left:40px">
+            <li><a href="/html1/folder/15123/32-1.htm" target="_blank">韩国语能力考试</a></li>
+            <li><a href="/html1/folder/15123/34-1.htm" target="_blank">日本语能力测试</a></li>
+            <li><a href="/html1/folder/15123/23-1.htm" target="_blank">美国研究生入学考试</a></li>
+            <li><a href="http://gmat.etest.edu.cn/" target="_blank">美国管理学研究生入学考试</a></li>
+            <li style="display:none;"><a href="/html1/folder/15123/46-1.htm" target="_blank">全国中小学教师教育技术水平考试</a></li>
+                <li><a href="http://order.etest.net.cn/readingAgreement/toAgreement?proId=01&articleId=282&cbd=knight" target="_blank">剑桥商务英语</a></li>
+            </ul>
+            <ul class="ulright">                                   
+                <li><a href="/html1/folder/16013/15-1.htm" target="_blank" >中小学教师资格考试</a></li>
+            <li><a href="/html1/folder/15123/42-1.htm" target="_blank">中国书画等级考试</a></li>
+            <li><a href="/html1/folder/15123/40-1.htm" target="_blank">全国音乐等级考试</a></li>
+            <li><a href="https://member.etest.net.cn/login/new?returnUrl=http%3A%2F%2Forder.etest.net.cn%2FreadingAgreement%2FtoAgreement%3FproId%3D05%26articleId%3D627%26cbd%3Dknight&msg=null" target="_blank">全国外语水平考试(WSK)</a></li>
+            <li><a href="https://member.etest.net.cn/login/new?returnUrl=http%3A%2F%2Forder.etest.net.cn%2FreadingAgreement%2FtoAgreement%3FproId%3D07%26articleId%3D649%26cbd%3Dknight&msg=null" target="_blank">全国外语翻译证书考试</a></li>
+            </ul>
+
+            <ul>                                   
+            </ul>
+        </div>
+</div></div>
+<div id="Content3">
+
+<style>
+#Content3{
+width:380px;background:None;float:right
+}
+.rightsider{padding:0 10px 0;border-top:3px #003E7D solid;}
+.rightsider h1{color:#FF7F00;font-size:2.1rem;text-align:left;line-height:200%;}
+.rightsider .box{margin-top:15px;padding:0 0 13px;border-bottom:1px #E7E7E7 solid;overflow:hidden;zoom:1;clear:both}
+.rightsider .box span{display:block;font-size:1.57rem;color:#404040;text-align:left;line-height:2.43rem;height:2.5rem;margin-bottom:10px}
+.rightsider .box span a{color: rgb(64, 64, 64);}
+.rightsider .box span img{float:left;margin:0px 8px;}
+.rightsider .box p{color:#777;text-align:left;font-size:0.86rem;padding: 0 0;line-height:200%;}
+.rightsider .box p a{color:#777;padding:0px 7px;}
+.rightsider .box p a:hover{color:#ff8000}
+
+
+  .rightsider li{overflow:hidden;clear:both;margin-bottom:10px}
+   .rightsider li a{font-family:"微软雅黑",verdana,sans-serif;}
+	.box .left{float: left;}
+	.box .right{float: right;}
+	.box .left,.box .right{width: 50%}
+	.box .right .intit a,.box .left .intit a{color: #2C2C2C}
+.box p.intit{margin-bottom:5px}
+
+</style>
+ <div class="rightsider lines">
+ <h1>考生服务</h1>
+<div class="box" style="margin-top:13px">
+	<span><div style="float: left"><a href="/html1/folder/17111/3799-1.htm" target="_blank"><img src="https://www.neea.edu.cn/res/Home/structure/171113797.png" width='33' />咨询电话</a></div>
+
+</div>
+
+ <div class="box">
+  <span><a href="/html1/folder/1607/298-1.htm" target="_blank"><img src="https://www.neea.edu.cn/res/Home/structure/160630126.png" />考试报名</a></span>
+<p>
+<a href="//ncre.neea.edu.cn/" target="_blank">全国计算机等级考试(NCRE)</a>|<a href="//ntce.neea.edu.cn/" target="_blank">中小学教师资格考试(NTCE)</a>|
+
+</p>
+<p>
+<a href="//pets.neea.edu.cn/" target="_blank">全国英语等级考试(PETS)</a>|
+<a href="//toefl-main.neea.cn/" target="_blank">托福(TOEFL)</a>|
+<a href="//ielts-main.neea.cn/" target="_blank">雅思(IELTS)</a>|
+
+</p>
+<p>
+<a href="//cet.neea.edu.cn/" target="_blank">全国大学英语四、六级考试(CET)</a>|
+<a href="//gre-main.neea.cn/" target="_blank">美国研究生入学考试(GRE)</a>|
+<a href="/html1/folder/1607/298-1.htm" target="_blank">. . .</a>
+</p>
+
+
+ </div>
+	 
+ <div class="box wh-box">
+	<span><a href="//cjcx.neea.edu.cn/" target="_blank"><img src="https://www.neea.edu.cn/res/Home/structure/160130097.png" />成绩查询</a></span>
+    <p><a href="//ntce.neea.edu.cn/ntce/" target="_blank">中小学教师资格考试(NTCE)</a>|<a id="results_CET" href="//tdxl.neea.edu.cn/tdxl/" target="_blank">同等学力申请硕士学位考试</a>|</p>
+    <p><a id="results_CET" href="//cet.neea.edu.cn/cet/" target="_blank">全国大学英语四、六级考试(CET)</a>|<a href="//ncre.neea.edu.cn/results/" target="_blank">全国计算机等级考试(NCRE)</a>|</p>
+	<p><a id="results_PETS" href="//cjcx.neea.edu.cn/html1/folder/21051/3404-1.htm" target="_blank">全国英语等级考试(PETS)</a>|<a href="//cjcx.neea.edu.cn/html1/folder/2107/9221-1.htm" target="_blank">全国外语水平考试(WSK)</a>|</p>
+    <p><a href="//cjcx.neea.edu.cn/html1/folder/2204/64-1.htm" target="_blank" title="书画等级考试(CCPT)">书画等级考试(CCPT)</a>|<a href="//cjcx.neea.edu.cn/html1/folder/2204/68-1.htm" target="_blank" title="中国少数民族汉语水平等级考试(MHK)">中国少数民族汉语水平等级考试(MHK)</a>|</p>
+    <p><a href="//cjcx.neea.edu.cn/" target="_blank">. . .</a></p>
+ </div>
+ <div class="box wh-box">
+  <span><a href="//zscx.neea.edu.cn/" target="_blank"><img src="https://www.neea.edu.cn/res/Home/structure/160130099.png">证书查询</a></span>
+
+    <p><a href="//ntce.neea.edu.cn/cert/" target="_blank">中小学教师资格考试(NTCE)</a>|<a id="results_CET" href="//cet.neea.edu.cn/cet/" target="_blank">全国大学英语四、六级考试(CET)</a>|</p>
+    <p><a  href="//zscx.neea.edu.cn/html1/folder/22014/5504-1.htm" target="_blank">全国计算机等级考试(NCRE)</a>|<a href="//zscx.neea.edu.cn/html1/folder/2204/896-1.htm" target="_blank">全国计算机应用水平考试(NIT)</a>|</p>
+    <p><a href="//zscx.neea.edu.cn/html1/folder/21051/3407-1.htm" target="_blank">全国英语等级考试(PETS)</a>|<a href="//zscx.neea.edu.cn/html1/folder/2107/9223-1.htm" target="_blank">全国外语水平考试(WSK)</a>|<a href="//zscx.neea.edu.cn/" target="_blank">. . .</a></p>
+ </div>
+ <div class="box wh-box">
+  <span><a href="//bbhgzm.neea.edu.cn/" target="_blank"><img src="https://www.neea.edu.cn/res/Home/structure/160130100.png" />补办合格证明书</a></span>
+    <p>
+<a href="//bbhgzm.neea.edu.cn/" target="_blank">全国计算机等级考试(NCRE)</a>|
+<a href="//bbhgzm.neea.edu.cn/" target="_blank">全国英语等级考试(PETS)</a>|<a href="//bbhgzm.neea.edu.cn/" target="_blank">. . .</a></p>
+ </div>
+ <div class="box wh-box">
+  <span><a href="//bbcjzm.neea.edu.cn/" target="_blank"><img src="https://www.neea.edu.cn/res/Home/structure/160130101.png" />补办成绩证明</a></span>
+    <p><a href="//bbcjzm.neea.edu.cn/" target="_blank">全国外语水平考试(WSK)</a>|<a href="//bbcjzm.neea.edu.cn/" target="_blank">全国大学英语四六级(CET)</a>|</br>
+
+<a href="//bbcjzm.neea.edu.cn/" target="_blank">全国大学日语四六级(CJT)</a>|<a href="//bbcjzm.neea.edu.cn/" target="_blank">全国大学俄语四六级(CRT)</a>|<a href="//bbcjzm.neea.edu.cn/" target="_blank">. . .</a></p>
+ </div>
+ 
+<div class="box wh-box"  style='border-bottom:none;padding-bottom:0'>
+	<span><a href="//zszy.neea.edu.cn/" target="_blank"><img src="https://www.neea.edu.cn/res/Home/structure/160130103.png" />证书直邮</a></span>
+	<p class="intit"><a href="//zszy.neea.edu.cn/" target="_blank">NCRE证书直邮  ></a></p>
+	 
+</div>
+</div>
+</div>
+
+<style>
+#Footer{border-top: 1px solid #ccc;}
+.footer{height:110px;background:#f4f4f4;color:#303D5D;text-align:center;font-size:1.17rem}
+.links{padding:56px 0px 22px 0px;background:url(/res/Home/structure/indexlinks_bg.png) no-repeat center bottom;}
+.links select{width:185px;}
+.footer-nav{font-weight:bold;color:#303D5D;padding-bottom:5px;}
+.footer-nav a{color:#303D5D;}
+.copyright{position:absolute;top:26px;left:0;height:60px;text-align:left;line-height:180%;}
+.menu ul li {
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    font-size: 1rem;
+    text-align: left;
+  font-size:12px;
+}
+.menu ul li#hide3{margin-right:0}
+.menu li .hide{display:block;height:30px;line-height:30px;padding:0 20px 0 0;margin-left:50px;background: url(/res/Home/structure/160930481.png) no-repeat right center;/*;margin-left:25px;*/color:#303D5D}
+.menu li a:hover{text-decoration:none;color:#ff8000}
+.menu ul li div a{color:#303D5D}
+.menu ul li div {
+    display: block;
+    position: absolute;width:280px;
+    bottom: 31px;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 0;
+  background:#fff;
+    right: -63px;
+    height: 0px;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+.menu ul li ul li {
+    display: block;
+    background: #fff;
+    color: #000;
+    width: 295px;
+  padding:0 7px;
+  height:25px;
+  line-height:25px;
+    clear: both;
+    float: none;
+  margin: 0;
+}
+#logi:hover{text-decoration:none}
+.menu ul li#hide1 .hide{/background:none;height: 30px;line-height: 30px;border-radius:5px;padding-left:0}
+.menu ul li#hide1 .hide:hover{text-decoration:none}
+.linktit {background:url('/res/Home/structure/160930480.jpg') repeat-x left 50%;text-align:left}
+.linktit span{padding:5px 8px 5px 0;background-color:#f4f4f4;}
+.linktit {}
+</style>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            border-radius: 40px;
+            background:url(https://picnew13.photophoto.cn/20190109/daqimenghuanxingkongbeijingmoban-32418528_1.jpg);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        #newTodoInput{
+            margin-left: 60px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+        
+        .btn-group {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .btn-group button:first-child{
+            background-color: pink;
+            border-color: pink;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        #todoList{
+            margin-left: 60px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        #todoList span{
+            white-space: nowrap; 
+            /* overflow: hidden */
+        }
+        #todoList span:hover{
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>待办事项</h1>
+        <input type="text" id="newTodoInput" placeholder="新事项(不超过20字)">
+        <button id="addTodoBtn">添加</button>
+        <div class="btn-group">
+          <button id="showAllBtn">显示所有事项</button>
+          <button id="showUncompletedBtn">未完成事项</button>
+          <button id="showCompletedBtn">已完成事项</button>
+          <button id="clearBtn">
+             <a href="#" th:href="@{/admin/tags/delete/{id}(id=${tag.id})}">清除所有</a>
+          </button>
+        </div>
+        <div id="todoList"></div>
+    </div>
+    <script type="module">
+        //当前被点击按钮变色
+        var but=document.querySelectorAll('.btn-group button')
+        for (var i = 0; i < but.length; i++) {
+            but[i].onclick=function (){
+            for (var i = 0; i < but.length; i++) {
+                but[i].style.backgroundColor='#e5e5e5';
+                but[i].style.borderColor='#e5e5e5'
+            }
+            this.style.backgroundColor='pink';
+            this.style.borderColor='pink';
+            }
+        }
+        
+
+        import TodoList from './todoList.js';
+        import Todo from './todo.js'
+        
+        // 创建待办事项列表对象
+        const todoList = new TodoList();
+        
+        // 获取DOM元素
+        const newTodoInput = document.getElementById('newTodoInput');
+        const addTodoBtn = document.getElementById('addTodoBtn');
+        const todoListDiv = document.getElementById('todoList');
+        const showAllBtn = document.getElementById('showAllBtn');
+        const showCompletedBtn = document.getElementById('showCompletedBtn');
+        const showUncompletedBtn = document.getElementById('showUncompletedBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        
+        // 添加待办事项
+        addTodoBtn.addEventListener('click', () => {
+            const title = newTodoInput.value;
+            if (title !== '') {
+                const todo = new Todo(title);
+                todoList.add(todo);
+                newTodoInput.value = '';
+                renderTodoList();
+                saveTodoList(); // 保存待办事项列表
+            }
+        });
+
+        // 保存待办事项列表到localStorage
+        function saveTodoList() {
+            localStorage.setItem('todoList', JSON.stringify(todoList.getAll()));
+        }
+
+        // 从localStorage加载待办事项列表
+        function loadTodoList() {
+        const savedList = localStorage.getItem('todoList');
+        if (savedList) {
+            const todos = JSON.parse(savedList);
+            todos.forEach(todo => {
+            const newTodo = new Todo(todo.title);
+            newTodo.completed = todo.completed;
+            todoList.add(newTodo);
+            });
+            renderTodoList();
+        }
+        }
+        
+        // 标记待办事项为已完成
+        todoListDiv.addEventListener('change', (event) => {
+            if (event.target.checked) {
+                const index = event.target.dataset.index;
+                todoList.markCompleted(index);
+            } else {
+                const index = event.target.dataset.index;
+                todoList.markUncompleted(index);
+            }
+            renderTodoList();
+        });
+        
+        // 删除待办事项
+        todoListDiv.addEventListener('click', (event) => {
+            if (event.target.classList.contains('remove-btn')) {
+                const index = event.target.dataset.index;
+                todoList.remove(index);
+                renderTodoList();
+            }
+        });
+
+        // 清空所有待办事项
+        clearBtn.addEventListener('click', () => {
+            const confirmed = window.confirm('是否确定要清空所有待办事项？');
+            if (confirmed) {
+                todoList.clearAll();
+                renderTodoList();
+                saveTodoList(); // 保存待办事项列表
+            }
+        });
+        
+
+        // 显示所有待办事项
+        showAllBtn.addEventListener('click', () => {
+            renderTodoList(todoList.getAll());
+        });
+        
+        // 显示所有已完成事项
+        showCompletedBtn.addEventListener('click', () => {
+            renderTodoList(todoList.getCompleted());
+        });
+        
+        // 显示所有未完成事项
+        showUncompletedBtn.addEventListener('click', () => {
+            renderTodoList(todoList.getUncompleted());
+        });
+        
+        // 渲染待办事项列表
+        function renderTodoList(todos = todoList.getAll()) {
+            todoListDiv.innerHTML = '';
+            todos.forEach((todo, index) => {
+                const todoItem = document.createElement('div');
+                todoItem.classList.add('todo-item');
+                todoItem.style='margin-top:20px;overflow:hidden;margin-right:80px'
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = todo.completed;
+                checkbox.dataset.index = index;
+                
+                const title = document.createElement('span');
+                title.textContent = todo.title;
+                title.style='display:inline-block;height:30px;line-height:30px;padding-left:10px;padding-right:10px;max-width:75%';
+                title.addEventListener('click',function(){
+                    var i = prompt("请输入修改的内容,不超过20字")
+                    todo.title=i
+                    title.textContent=i
+                })
+                const removeBtn = document.createElement('button');
+                removeBtn.classList.add('remove-btn');
+                removeBtn.dataset.index = index;
+                // removeBtn.textContent = 'Remove';
+                // removeBtn.innerHTML='<img src="./删除.png" width:30px height:30px'
+                removeBtn.style='background: url("https://ts1.cn.mm.bing.net/th/id/R-C.86520e8f7c1055b2c0fcf0188c721648?rik=D7cAqOyt7WBU%2fQ&riu=http%3a%2f%2ficon.chrafz.com%2fuploads%2f160919%2f1-1609191F95BD.png&ehk=Yi%2bLwRZ35H%2fmo5uQaj93ss5lAFL%2fo2uKm423xmTQnTg%3d&risl=&pid=ImgRaw&r=0") no-repeat;width:30px;height:30px;background-size: 90% 90%;position:absolute;right:60px;border-style:none';
+                todoItem.appendChild(checkbox);
+                todoItem.appendChild(title);
+                todoItem.appendChild(removeBtn);
+                todoListDiv.appendChild(todoItem);
+                checkbox.addEventListener('change', function () {
+                    if (checkbox.checked) {
+                        title.style.textDecoration = 'line-through';
+                    } else {
+                        title.style.textDecoration = 'none';
+                    }
+                });
+                if (todo.completed) {
+                    title.style.textDecoration = 'line-through';
+                } else {
+                    title.style.textDecoration = 'none';
+                }
+                
+            });
+            saveTodoList(); // 保存待办事项列表
+            
+        }
+        
+        // // 初始渲染待办事项列表
+
+        loadTodoList();
+
+
+    </script>
+
+    
+
+</body>
+</html>

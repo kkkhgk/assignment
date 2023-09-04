@@ -1,0 +1,13 @@
+1.https://cn.vuejs.org/guide/introduction.html	vue官网
+
+2.https://cn.vuejs.org/glossary/			vue中用到的术语
+
+3.https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle	vue生命周期
+
+4.https://programmer.ink/think/vue-responsive-principle-how-to-realize-mvvm-bidirectional-binding.html	vue的mvvm原理
+
+5.https://www.cnblogs.com/microsoft-zyl/p/15937490.html	
+  https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+  https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy
+  https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/set
+  vue 2.0 跟3.0的区别
